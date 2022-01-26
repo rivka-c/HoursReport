@@ -17,7 +17,7 @@ export class HoursReportService {
   }
 
   addHoursReport(hoursReport:HoursReport) {
-    return this.httpClient.post<HoursReport>(url,{toDateTime:hoursReport.toDateTime,fromDateTime:hoursReport.fromDateTime,userId:hoursReport.userId,projectId:hoursReport.projectId});
+    return this.httpClient.post(url,{toDateTime:hoursReport.toDateTime,fromDateTime:hoursReport.fromDateTime,userId:hoursReport.userId,projectId:hoursReport.projectId});
   }
 
   

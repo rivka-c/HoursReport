@@ -43,7 +43,6 @@ export class HoursReportComponent implements OnInit {
    this.hoursReport[0].fromDateTime=d;
    
    d=new Date(latest_date+'T'+this.toTime);
-    
     this.hoursReport[0].toDateTime=d;
     this.hoursReport[0].userId=this.authService.MyUser.id;
     this.hoursReport[0].projectId=this.project;
