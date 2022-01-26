@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<mat-card>
+ <mat-card-content>
+  <a style="cursor: pointer;margin-left: 300px;" (click)="exportexcel()">
+    <mat-icon > cloud_download</mat-icon>
+  </a>
+    <table matSort (matSortChange)="sortData($event)" id="excel-table">
+      <tr>
+      <th mat-sort-header="userId">User</th>
+      <th mat-sort-header="projectId">Project</th>
+      <th >Date</th>
+      <th>From Hour</th>
+      <th >To Hour</th>
+    </tr>
+    <tr *ngFor="let H of sortedData">
+      <td>{{H.user.name}}</td>
+      <td>{{H.project.name}}</td>
+      <td>{{H.fromDateTime|date:'dd/MM/yyyy'}}</td>
+      <td>{{H.fromDateTime|date:'HH:mm'}}</td>
+      <td>{{H.toDateTime|date:'HH:mm'}}</td>
+    </tr>
+    </table>
+   
+
+</mat-card-content>
+</mat-card>
+
+          

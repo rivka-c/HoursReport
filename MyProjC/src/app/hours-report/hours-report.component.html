@@ -1,0 +1,39 @@
+
+<mat-card>
+    <mat-card-content>
+      
+    <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input [(ngModel)]="date" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a project</mat-label>
+        <mat-select [(ngModel)]="project" >
+          <mat-option *ngFor="let p of projects"n [value]="p.id">{{p.name}}</mat-option>
+        
+        </mat-select>
+      </mat-form-field>
+
+  
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>fromTime</mat-label>
+          <input [(ngModel)]="fromTime" type="time" matInput
+                 placeholder="00:00">
+        </mat-form-field>
+
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>toTime</mat-label>
+          <input [(ngModel)]="toTime" type="time" matInput  
+                 placeholder="00:00">
+        </mat-form-field>
+    
+
+  
+  <button style="margin: auto;
+  display: block;" (click)="ok()">אישור</button>
+ </mat-card-content>
+    </mat-card>
+   

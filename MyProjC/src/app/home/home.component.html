@@ -1,0 +1,13 @@
+
+<div style="display:flex;align-items: center;margin-left:20px;">
+  
+       <div style="width:150px;background-color:white;"><a [routerLink]="['/']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Login</a></div>
+        <div  style="width:150px;background-color:white;"><a [routerLink]="['HoursReport']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">To hours report</a></div>
+        <div  style="width:150px;background-color:white;"><a [routerLink]="['HoursConcentration']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Concentration report</a></div>
+   
+</div>
+    
+
+    <h1>hi {{this.name}}!</h1>
+  
+<router-outlet></router-outlet>

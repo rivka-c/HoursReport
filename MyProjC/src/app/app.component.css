@@ -1,0 +1,15 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+  }
+
+  mat-card {
+    max-width: 500px;
+    margin: 2em auto;
+    text-align: center;
+    background-color: rgb(48, 212, 204);
+
+  }
+  
+  mat-form-field {
+    display: block;
+  }
